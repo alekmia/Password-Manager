@@ -40,22 +40,16 @@ public class AddAccountPage extends Page {
         if (bindingResult.hasErrors()) {
             return "AddAccountPage";
         }
-        if (!checkNum(account.getPassword())) {
-            if ((boolean) httpSession.getAttribute("confirmation") == false) {
-                model.addAttribute("account", account);
-                model.addAttribute("suggested_password", generatePassword());
-                httpSession.setAttribute("confirmation", true);
+        if((!checkLet(account.getPassword()) || !checkNum(account.getPassword()))
+                && (boolean)httpSession.getAttribute("confirmation") == false) {
 
-                putMessage(httpSession, "You sure you want a password like that? Make sure your password contains a number");
-            }
-        }if (!checkLet(account.getPassword())) {
-            if ((boolean) httpSession.getAttribute("confirmation") == false) {
-                model.addAttribute("account", account);
-                model.addAttribute("suggested_password", generatePassword());
-                httpSession.setAttribute("confirmation", true);
+            model.addAttribute("account", account);
+            model.addAttribute("suggested_password", generatePassword());
+            httpSession.setAttribute("confirmation", true);
 
-                putMessage(httpSession, "You sure you want a password like that? Make sure your password contains a number");
-            }
+            putMessage(httpSession,
+                    "You sure you want a password like that? Make sure your password contains a number and a letter");
+            return "AddAccountPage";
         }
         userService.addAccount(getUser(httpSession), account);
         putMessage(httpSession, "You added a new account! Congratulations!!");

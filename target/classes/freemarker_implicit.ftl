@@ -2,3 +2,4 @@
 [#-- @implicitly included --]
 [#-- @ftlvariable name="message" type="java.lang.String" --]
 [#-- @ftlvariable name="user" type="alekmia.work.domain.User" --]
+[#-- @ftlvariable name="account" type="alekmia.work.domain.Account" --]

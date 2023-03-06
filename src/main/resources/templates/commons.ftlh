@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alekmia</title>
+    <title>Password Manager</title>
     <link rel="icon" type="image/png" href="<@spring.url '/favicon.png'/>" />
     <link rel="stylesheet" type="text/css" href="<@spring.url '/css/normalize.css'/>">
     <link rel="stylesheet" type="text/css" href="<@spring.url '/css/style.css'/>">
@@ -21,11 +21,11 @@
 </head>
 <body>
 <header>
-    <a href="<@spring.url '/'/>"><img src="<@spring.url '/img/alekmia_logo.png'/>" alt="alekmia" title="alekmia"/></a>
-    <div class="languages">
-        <a href="#"><img src="<@spring.url '/img/gb.png'/>" alt="In English" title="In English"/></a>
-        <a href="#"><img src="<@spring.url '/img/ru.png'/>" alt="In Russian" title="In Russian"/></a>
-    </div>
+<#--    <a href="<@spring.url '/'/>"><img src="<@spring.url '/img/alekmia_logo.png'/>" alt="alekmia" title="alekmia"/></a>-->
+<#--    <div class="languages">-->
+<#--        <a href="#"><img src="<@spring.url '/img/gb.png'/>" alt="In English" title="In English"/></a>-->
+<#--        <a href="#"><img src="<@spring.url '/img/ru.png'/>" alt="In Russian" title="In Russian"/></a>-->
+<#--    </div>-->
     <div class="enter-or-register-box">
         <#if user??>
             ${user.login}
@@ -57,7 +57,7 @@
     </main>
 </div>
 <footer>
-    <a href="<@spring.url '/'/>">Alekmia</a> &copy; 2023 by Aleksey Myasnikov
+    <a href="<@spring.url '/'/>">Password Manager</a> &copy; 2023
 </footer>
 </body>
 <script>

@@ -45,8 +45,8 @@ header .languages {
 
 header .enter-or-register-box {
     position: absolute;
-    top: 32px;
-    right: 0;
+    top: 12px;
+    right: 1rem;
 }
 
 header nav {

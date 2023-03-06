@@ -55,6 +55,7 @@ public class UserService {
 
     public void removeAccountBySite(User user, Account account) {
         user.removeAccountBySite(account.getSite());
+        accountRepository.deleteAccountBySite(account.getSite());
         userRepository.save(user);
     }
 
