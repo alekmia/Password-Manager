@@ -10,7 +10,8 @@
             <#list user.accounts as account>
                 <li>${account.getSite()}: <br>
                     login: ${account.getLogin()} <br>
-                    password: ${account.getPassword()}</li>
+                    password: ${account.getPassword()}<br>
+                    last change: ${account.getTime()}</li>
             </#list>
         </ul>
     </div>

@@ -22,17 +22,14 @@ public class AddAccountPage extends Page {
         this.userService = userService;
     }
 
-    //    @AnyRole({Role.Name.WRITER, Role.Name.ADMIN})
     @GetMapping("/addAccount")
     public String addAccountGet(Model model, HttpSession httpSession) {
-//        model.addAttribute("country", new Country());
         model.addAttribute("account", new Account());
         model.addAttribute("suggested_password", generatePassword());
         httpSession.setAttribute("confirmation", false);
         return "AddAccountPage";
     }
 
-    //    @AnyRole({Role.Name.WRITER, Role.Name.ADMIN})
     @PostMapping("/addAccount")
     public String addAccountPost(Model model, @Valid @ModelAttribute Account account,
                                  BindingResult bindingResult,

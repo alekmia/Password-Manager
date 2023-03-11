@@ -50,6 +50,7 @@ header .enter-or-register-box {
 }
 
 header nav {
+    text-align: center;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 0.75rem 0.25rem;
@@ -63,7 +64,8 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin-left: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 header nav ul li a {
@@ -140,21 +142,6 @@ aside section .footer a:after {
     text-align: center;
 }
 
-
-.mapContents svg {
-    margin-top: 1rem;
-}
-
-.mapContents .name {
-    position: absolute;
-    opacity: 0.5;
-    font-size: 1.5rem;
-}
-
-.mapContents svg path {
-    cursor: pointer;
-}
-
-.mapContents svg path:hover {
-    fill: green;
+.frame {
+    text-align: center;
 }

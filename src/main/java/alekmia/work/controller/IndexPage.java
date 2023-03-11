@@ -14,7 +14,6 @@ public class IndexPage extends Page {
 
     @GetMapping({"", "/"})
     public String index(HttpSession httpSession, Model model) {
-//        model.addAttribute("posts", postService.findAll());
         if(getUser(httpSession) != null) {
             return "MyAccountsPage";
         }

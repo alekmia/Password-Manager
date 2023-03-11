@@ -7,8 +7,6 @@ import alekmia.work.repository.AccountRepository;
 import alekmia.work.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -42,13 +40,10 @@ public class UserService {
         return id == null ? null : userRepository.findById(id).orElse(null);
     }
 
-    public List<User> findAll() {
-        return userRepository.findAllByOrderByIdDesc();
-    }
-
     public void addAccount(User user, Account account) {
         user.addAccount(account);
         account.setOwner(user);
+//        accountRepository.updateTime(account.getSite());
         userRepository.save(user);
     }
 

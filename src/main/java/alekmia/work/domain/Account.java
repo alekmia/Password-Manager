@@ -1,8 +1,11 @@
 package alekmia.work.domain;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity
 public class Account {
@@ -26,6 +29,17 @@ public class Account {
     @NotNull
     @NotEmpty
     private String password;
+
+    @CreationTimestamp
+    private Date time;
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
     public User getOwner() {
         return owner;

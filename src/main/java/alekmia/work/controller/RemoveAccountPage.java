@@ -20,7 +20,6 @@ public class RemoveAccountPage extends Page {
 
     @GetMapping("/removeAccount")
     public String removeAccountGet(Model model) {
-//        model.addAttribute("country", new Country());
         model.addAttribute("account", new Account());
         model.addAttribute("site");
         return "RemoveAccountPage";

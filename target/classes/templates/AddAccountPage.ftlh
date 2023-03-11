@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="password_suggestor" style="margin-bottom: 15px">
-                    Suggested password: ${suggested_password}<br>
+                    Suggested password: ${suggested_password!}<br>
                 </div>
                 <div class="button-field">
                     <input type="submit" value="Make a new account on said site">
